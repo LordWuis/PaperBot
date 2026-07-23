@@ -1,9 +1,13 @@
 import hashlib
+import hmac
+import json
 import logging
 import os
 import random
 import time
+from datetime import datetime
 from functools import wraps
+from zoneinfo import ZoneInfo
 
 from typing import Optional
 
@@ -70,11 +74,9 @@ def complete_login(otp: str) -> dict:
     user_id = web_user_id_from_email(pending["email"])
     status = database_handler.get_user_status(user_id)
     if status.get("status") == "not_found":
-        database_handler.register_new_user(user_id, pending["name"] or pending["email"])
-        granted_user_id = session.get("web_granted_user_id")
-        if not granted_user_id or int(granted_user_id) == user_id:
-            database_handler.update_user_subscription(user_id)
-            session["web_granted_user_id"] = user_id
+        registration = database_handler.register_new_user(user_id, pending["name"] or pending["email"])
+        if registration.get("status") not in {"success", "already_exists"}:
+            return {"ok": False, "error": "Could not register this account."}
         database_handler.clear_user_cache(user_id)
         status = database_handler.get_user_status(user_id)
 
@@ -136,16 +138,31 @@ def build_payment_context() -> dict:
     payment_url = None
     payment_error = None
 
-    if user:
+    if user and status.get("status") in {"expired", "inactive"}:
         try:
             import razorpay_handler
 
-            payment_url = razorpay_handler.create_payment_link(user["id"])
+            cached_link = session.get("web_payment_link") or {}
+            if (
+                cached_link.get("user_id") == user["id"]
+                and int(cached_link.get("expires_at", 0)) > int(time.time()) + 60
+            ):
+                payment_url = cached_link.get("url")
+            else:
+                payment_url = razorpay_handler.create_payment_link(user["id"])
+                if payment_url:
+                    session["web_payment_link"] = {
+                        "user_id": user["id"],
+                        "url": payment_url,
+                        "expires_at": int(time.time()) + (23 * 60 * 60),
+                    }
             if not payment_url:
                 payment_error = razorpay_handler.get_last_error() or "Payment link is not available right now."
         except Exception as exc:
             logging.exception("Failed to create web payment link")
             payment_error = "Payment link is not available right now."
+    elif user and status.get("status") != "active":
+        payment_error = status.get("message") or "We could not verify your account status. Please try again."
 
     return {"user": user, "status": status, "payment_url": payment_url, "payment_error": payment_error}
 
@@ -206,11 +223,14 @@ def register_auth_routes(app):
         session.pop("web_form_values_by_type", None)
         session.pop("web_form_values", None)
         session.pop("selected_letter_type", None)
+        session.pop("web_payment_link", None)
         return redirect(url_for("web_login"))
 
     @app.route("/pay", methods=["GET"])
     @require_login
     def web_paywall():
+        if current_subscription_status().get("status") == "active":
+            return redirect(url_for("web_dashboard"))
         return render_template("paywall.html", **build_payment_context())
 
     @app.route("/pay/check", methods=["POST"])
@@ -226,7 +246,75 @@ def register_auth_routes(app):
 
         if status.get("status") == "active":
             return jsonify({"ok": True, "redirect": url_for("web_dashboard")})
-        return jsonify({"ok": False, "error": "Payment not active yet."}), 400
+        if status.get("status") == "error":
+            return jsonify({"ok": False, "error": "Could not verify payment status right now."}), 503
+        return jsonify({"ok": False, "error": "Payment not active yet."})
+
+    @app.route("/webhooks/razorpay", methods=["POST"])
+    def razorpay_webhook():
+        webhook_secret = os.getenv("RAZORPAY_WEBHOOK_SECRET", "").strip()
+        if not webhook_secret:
+            app.logger.error("RAZORPAY_WEBHOOK_SECRET is not configured")
+            return jsonify({"ok": False, "error": "Webhook is not configured."}), 503
+
+        raw_body = request.get_data(cache=True)
+        supplied_signature = request.headers.get("X-Razorpay-Signature", "")
+        expected_signature = hmac.new(
+            webhook_secret.encode("utf-8"),
+            raw_body,
+            hashlib.sha256,
+        ).hexdigest()
+        if not supplied_signature or not hmac.compare_digest(supplied_signature, expected_signature):
+            return jsonify({"ok": False, "error": "Invalid signature."}), 401
+
+        try:
+            event = json.loads(raw_body)
+        except (TypeError, ValueError):
+            return jsonify({"ok": False, "error": "Invalid JSON."}), 400
+
+        if event.get("event") != "payment_link.paid":
+            return jsonify({"ok": True, "ignored": True})
+
+        import razorpay_handler
+
+        payment_link = event.get("payload", {}).get("payment_link", {}).get("entity", {})
+        notes = payment_link.get("notes") or {}
+        if not isinstance(notes, dict):
+            return jsonify({"ok": False, "error": "Malformed payment event."}), 400
+        user_id_text = notes.get("paperbot_user_id") or notes.get("telegram_user_id")
+
+        try:
+            user_id = int(user_id_text)
+            amount = int(payment_link.get("amount"))
+            amount_paid = int(payment_link.get("amount_paid"))
+            paid_at = int(event.get("created_at"))
+        except (TypeError, ValueError):
+            return jsonify({"ok": False, "error": "Malformed payment event."}), 400
+
+        if (
+            user_id <= 0
+            or payment_link.get("status") != "paid"
+            or payment_link.get("currency") != "INR"
+            or amount != razorpay_handler.PAYMENT_AMOUNT_PAISE
+            or amount_paid != amount
+        ):
+            return jsonify({"ok": False, "error": "Payment details do not match."}), 400
+
+        activation_date = datetime.fromtimestamp(
+            paid_at,
+            tz=ZoneInfo("Asia/Kolkata"),
+        ).date()
+        if not database_handler.activate_paid_subscription(user_id, activation_date=activation_date):
+            app.logger.error("Failed to activate subscription for user %s", user_id)
+            return jsonify({"ok": False, "error": "Could not activate subscription."}), 500
+
+        return jsonify(
+            {
+                "ok": True,
+                "user_id": user_id,
+                "access_through": database_handler.get_subscription_access_through(activation_date),
+            }
+        )
 
 
 def _hash_otp(otp: str) -> str:

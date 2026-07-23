@@ -78,33 +78,44 @@
 <body>
     <main class="card">
         <h1>Subscription required</h1>
-        <p>30 days access for Rs. 999.</p>
+        <p>30 calendar days of access for Rs. 999. Your access starts as soon as payment is confirmed.</p>
         {% if payment_error %}
             <div class="message visible">{{ payment_error }}</div>
         {% endif %}
         <div class="actions">
             {% if payment_url %}
-                <a class="primary" href="{{ payment_url }}">Pay Rs. 999</a>
+                <a class="primary" href="{{ payment_url }}" rel="noopener">Pay Rs. 999</a>
             {% else %}
                 <button class="primary" type="button" disabled>Payment unavailable</button>
             {% endif %}
-            <button class="secondary" id="checkButton" type="button">Check Status</button>
+            <button class="secondary" id="checkButton" type="button">I've Paid - Check Status</button>
             <a class="secondary" href="{{ url_for('web_logout') }}">Logout</a>
         </div>
         <div class="message" id="message"></div>
     </main>
     <script>
         const message = document.querySelector('#message');
-        document.querySelector('#checkButton').addEventListener('click', async () => {
-            const response = await fetch('/pay/check', { method: 'POST' });
-            const contentType = response.headers.get('content-type') || '';
-            const data = contentType.includes('application/json') ? await response.json() : {};
-            if (data.ok) {
-                window.location.href = data.redirect;
-                return;
+        const checkButton = document.querySelector('#checkButton');
+        checkButton.addEventListener('click', async () => {
+            checkButton.disabled = true;
+            checkButton.textContent = 'Checking...';
+            message.classList.remove('visible');
+            try {
+                const response = await fetch('{{ url_for("web_check_payment") }}', { method: 'POST' });
+                const contentType = response.headers.get('content-type') || '';
+                const data = contentType.includes('application/json') ? await response.json() : {};
+                if (data.ok) {
+                    window.location.href = data.redirect;
+                    return;
+                }
+                message.textContent = data.error || 'Payment not active yet.';
+            } catch (error) {
+                message.textContent = 'Could not check payment status. Please try again.';
+            } finally {
+                message.classList.add('visible');
+                checkButton.disabled = false;
+                checkButton.textContent = "I've Paid - Check Status";
             }
-            message.textContent = data.error || 'Payment not active yet.';
-            message.style.display = 'block';
         });
     </script>
 </body>

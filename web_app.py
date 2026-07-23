@@ -11,7 +11,10 @@ import web_auth
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 load_project_env(BASE_DIR)
 
-SECRET = os.getenv("FLASK_SECRET_KEY", "paperbot")
+SECRET = os.getenv("FLASK_SECRET_KEY", "").strip()
+if os.getenv("VERCEL") and not SECRET:
+    raise RuntimeError("FLASK_SECRET_KEY must be configured in production.")
+SECRET = SECRET or "paperbot-local-development"
 
 app = Flask(__name__, template_folder="web_templates")
 app.secret_key = SECRET

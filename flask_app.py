@@ -33,10 +33,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 load_project_env(BASE_DIR)
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-SECRET = "MySuperSecretPassword123"
+SECRET = os.getenv("FLASK_SECRET_KEY", "").strip()
+if os.getenv("VERCEL") and not SECRET:
+    raise RuntimeError("FLASK_SECRET_KEY must be configured in production.")
+SECRET = SECRET or "paperbot-local-development"
 
 app = Flask(__name__, template_folder="web_templates")
-app.secret_key = os.getenv("FLASK_SECRET_KEY", SECRET)
+app.secret_key = SECRET
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(days=45)
 app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 app.config["SESSION_COOKIE_SECURE"] = bool(os.getenv("VERCEL"))

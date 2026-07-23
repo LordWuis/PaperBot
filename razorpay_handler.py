@@ -1,5 +1,6 @@
 import os
 import time
+from urllib.parse import urljoin
 
 import requests
 
@@ -9,10 +10,19 @@ from config_loader import load_project_env
 load_project_env()
 
 _last_error = None
+PAYMENT_AMOUNT_PAISE = 999 * 100
 
 
 def get_last_error() -> str | None:
     return _last_error
+
+
+def _callback_url() -> str | None:
+    base_url = os.getenv("APP_BASE_URL", "").strip()
+    if not base_url:
+        vercel_url = os.getenv("VERCEL_URL", "").strip()
+        base_url = f"https://{vercel_url}" if vercel_url else ""
+    return urljoin(f"{base_url.rstrip('/')}/", "pay") if base_url else None
 
 
 def create_payment_link(user_id: int):
@@ -32,14 +42,13 @@ def create_payment_link(user_id: int):
             print(_last_error)
             return None
 
-        amount_in_paise = 999 * 100
-
         link_data = {
-            "amount": amount_in_paise,
+            "amount": PAYMENT_AMOUNT_PAISE,
             "currency": "INR",
             "accept_partial": False,
-            "description": "30-Day Access to Telegram Bot",
+            "description": "30-Day Access to PaperBot",
             "notes": {
+                "paperbot_user_id": str(user_id),
                 "telegram_user_id": str(user_id),
             },
             "notify": {
@@ -49,6 +58,11 @@ def create_payment_link(user_id: int):
             "reminder_enable": False,
             "expire_by": int(time.time()) + 86400,
         }
+        callback_url = _callback_url()
+        if callback_url:
+            link_data["callback_url"] = callback_url
+            link_data["callback_method"] = "get"
+
         response = requests.post(
             "https://api.razorpay.com/v1/payment_links",
             auth=(key_id, key_secret),

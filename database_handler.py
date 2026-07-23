@@ -4,7 +4,7 @@ import os
 import json
 import requests
 import tempfile
-from datetime import date, datetime
+from datetime import date, timedelta
 from config_loader import load_project_env
 
 load_project_env()
@@ -13,7 +13,7 @@ load_project_env()
 SCRIPT_URL = os.getenv('GOOGLE_SCRIPT_URL')
 # The local JSON file for caching user statuses
 CACHE_FILE = os.path.join(tempfile.gettempdir(), 'user_status_cache.json') if os.getenv("VERCEL") else 'user_status_cache.json'
-SUBSCRIPTION_EXPIRY_DAY = 8
+SUBSCRIPTION_DURATION_DAYS = 30
 
 
 def _load_cache():
@@ -84,6 +84,25 @@ def clear_user_cache(user_id: int):
         print(f"Cache cleared for user_id: {user_id}")
 
 
+def _apply_local_expiry(user_data: dict, today: date | None = None) -> dict:
+    """Fail closed when an active cached record is past its access-through date."""
+    normalized = dict(user_data)
+    expiry_date_text = normalized.get("expiry_date")
+    if normalized.get("status") != "active" or not expiry_date_text:
+        return normalized
+
+    try:
+        expiry_date = date.fromisoformat(str(expiry_date_text)[:10])
+    except (TypeError, ValueError):
+        normalized["status"] = "error"
+        normalized["message"] = "Subscription expiry date is invalid."
+        return normalized
+
+    if (today or date.today()) > expiry_date:
+        normalized["status"] = "expired"
+    return normalized
+
+
 def get_user_status(user_id: int):
     """
     Checks user status. First checks the local JSON cache, then falls back to the Google Sheet.
@@ -92,15 +111,10 @@ def get_user_status(user_id: int):
     user_id_str = str(user_id)
 
     if user_id_str in cache:
-        cached_data = cache[user_id_str]
-        # Perform local expiry check first - it's fast and saves an API call
-        expiry_date_text = cached_data.get('expiry_date')
-        if expiry_date_text:
-            expiry_date = datetime.strptime(expiry_date_text, "%Y-%m-%d")
-            if datetime.now() > expiry_date and cached_data['status'] != 'expired':
-                cached_data['status'] = 'expired'
-                cache[user_id_str] = cached_data
-                _save_cache(cache)
+        cached_data = _apply_local_expiry(cache[user_id_str])
+        if cached_data != cache[user_id_str]:
+            cache[user_id_str] = cached_data
+            _save_cache(cache)
 
         print(f"Cache hit for user {user_id_str}. Status: {cached_data['status']}")
         return cached_data
@@ -111,7 +125,7 @@ def get_user_status(user_id: int):
     response = _fetch_from_sheet(params)
 
     if response.get("status") == "success":
-        user_data = response["data"]
+        user_data = _apply_local_expiry(response["data"])
         # Update the cache with the fresh data
         cache[user_id_str] = user_data
         _save_cache(cache)
@@ -129,15 +143,15 @@ def register_new_user(user_id: int, username: str):
     return _fetch_from_sheet(params)
 
 
+def get_subscription_access_through(activation_date: date | None = None) -> str:
+    """Return the final active date for a 30-calendar-day access period."""
+    activation_date = activation_date or date.today()
+    return (activation_date + timedelta(days=SUBSCRIPTION_DURATION_DAYS - 1)).isoformat()
+
+
 def get_next_subscription_expiry(today: date | None = None) -> str:
-    """Returns the fixed monthly expiry date used by the payment flow."""
-    today = today or date.today()
-    year = today.year
-    month = today.month + 1
-    if month == 13:
-        month = 1
-        year += 1
-    return date(year, month, SUBSCRIPTION_EXPIRY_DAY).strftime("%Y-%m-%d")
+    """Backward-compatible alias for the access-through date."""
+    return get_subscription_access_through(today)
 
 
 def log_activity(letter_type: str, recipient_name: str, recipient_email: str, sent_by: str, status: str):
@@ -154,7 +168,7 @@ def log_activity(letter_type: str, recipient_name: str, recipient_email: str, se
     return response.get("status") == "success"
 
 
-def update_user_subscription(user_id: int):
+def update_user_subscription(user_id: int, activation_date: date | None = None):
     """
     Updates a user's subscription in the Google Sheet and clears the local cache for that user.
     This should be called by your Razorpay webhook handler.
@@ -162,7 +176,7 @@ def update_user_subscription(user_id: int):
     params = {
         'action': 'updateSubscription',
         'user_id': user_id,
-        'expiry_date': get_next_subscription_expiry(),
+        'expiry_date': get_subscription_access_through(activation_date),
     }
     response = _fetch_from_sheet(params)
     if response.get("status") == "success":
@@ -170,6 +184,25 @@ def update_user_subscription(user_id: int):
         clear_user_cache(user_id)
         return True
     return False
+
+
+def activate_paid_subscription(user_id: int, activation_date: date) -> bool:
+    """Apply a paid period without letting duplicate or late events shorten access."""
+    proposed_access_through = get_subscription_access_through(activation_date)
+    clear_user_cache(user_id)
+    current = get_user_status(user_id)
+    current_expiry_text = current.get("expiry_date")
+
+    if current.get("status") == "active" and current_expiry_text:
+        try:
+            current_expiry = date.fromisoformat(str(current_expiry_text)[:10])
+            proposed_expiry = date.fromisoformat(proposed_access_through)
+            if current_expiry >= proposed_expiry:
+                return True
+        except (TypeError, ValueError):
+            pass
+
+    return update_user_subscription(user_id, activation_date=activation_date)
 
 
 def fetch_student_from_client_sheet(name: str):
