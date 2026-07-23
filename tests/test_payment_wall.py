@@ -85,6 +85,49 @@ class SubscriptionTimingTests(unittest.TestCase):
         self.assertTrue(result)
         update.assert_not_called()
 
+    @patch("database_handler._save_cache")
+    @patch("database_handler._fetch_from_sheet")
+    @patch("database_handler._load_cache")
+    def test_force_refresh_replaces_cached_active_status(
+        self,
+        load_cache,
+        fetch,
+        save_cache,
+    ):
+        load_cache.return_value = {
+            "123": {"status": "active", "expiry_date": "2026-10-13"}
+        }
+        fetch.return_value = {
+            "status": "success",
+            "data": {"status": "expired", "expiry_date": "2026-04-24"},
+        }
+
+        status = database_handler.get_user_status(123, force_refresh=True)
+
+        self.assertEqual(status["status"], "expired")
+        self.assertEqual(status["expiry_date"], "2026-04-25")
+        fetch.assert_called_once()
+        self.assertEqual(save_cache.call_args.args[0]["123"]["status"], "expired")
+
+    def test_sheet_date_offset_restores_displayed_calendar_date(self):
+        status = database_handler._normalize_sheet_dates(
+            {"status": "active", "expiry_date": "2026-10-12"}
+        )
+
+        self.assertEqual(status["expiry_date"], "2026-10-13")
+
+    @patch("database_handler._fetch_from_sheet")
+    @patch("database_handler._load_cache")
+    def test_normal_read_still_uses_cache(self, load_cache, fetch):
+        load_cache.return_value = {
+            "123": {"status": "active", "expiry_date": "2026-10-13"}
+        }
+
+        status = database_handler.get_user_status(123)
+
+        self.assertEqual(status["status"], "active")
+        fetch.assert_not_called()
+
 
 class PaymentLinkTests(unittest.TestCase):
     @patch("razorpay_handler.requests.post")
@@ -140,6 +183,11 @@ class PaymentWallWebTests(unittest.TestCase):
         @app.route("/app")
         def web_dashboard():
             return "dashboard"
+
+        @app.route("/fresh-action", methods=["POST"])
+        @web_auth.require_fresh_subscription
+        def fresh_action():
+            return "fresh"
 
         self.app = app
         self.client = app.test_client()
@@ -215,6 +263,36 @@ class PaymentWallWebTests(unittest.TestCase):
         self.assertIn(b"Payment unavailable", response.data)
         self.assertIn(b"Status service unavailable.", response.data)
         create_link.assert_not_called()
+
+    @patch("web_auth.database_handler.get_user_status")
+    def test_sensitive_action_bypasses_cache(self, get_status):
+        self.login()
+        get_status.return_value = {"status": "active", "expiry_date": "2026-10-13"}
+
+        response = self.client.post("/fresh-action")
+
+        self.assertEqual(response.status_code, 200)
+        get_status.assert_called_once_with(123, force_refresh=True)
+
+    @patch("web_auth.database_handler.get_user_status")
+    def test_fresh_expired_status_blocks_sensitive_action(self, get_status):
+        self.login()
+        get_status.return_value = {"status": "expired", "expiry_date": "2026-04-25"}
+
+        response = self.client.post("/fresh-action")
+
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(response.headers["Location"].endswith("/pay"))
+
+    @patch("web_auth.database_handler.get_user_status")
+    def test_fresh_status_error_fails_closed(self, get_status):
+        self.login()
+        get_status.return_value = {"status": "error", "message": "timeout"}
+
+        response = self.client.post("/fresh-action")
+
+        self.assertEqual(response.status_code, 503)
+        self.assertIn(b"Could not verify subscription status", response.data)
 
     @patch("web_auth.database_handler.update_user_subscription")
     @patch("web_auth.database_handler.get_user_status")

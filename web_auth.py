@@ -96,12 +96,12 @@ def current_web_user() -> Optional[dict]:
     return session.get("web_user")
 
 
-def current_subscription_status() -> dict:
+def current_subscription_status(force_refresh: bool = False) -> dict:
     user = current_web_user()
     if not user:
         return {"status": "not_logged_in"}
     try:
-        return database_handler.get_user_status(user["id"])
+        return database_handler.get_user_status(user["id"], force_refresh=force_refresh)
     except Exception as exc:
         logging.exception("Failed to check web subscription status")
         return {"status": "error", "message": str(exc)}
@@ -124,6 +124,23 @@ def require_active_subscription(route_func):
             return redirect(url_for("web_login"))
 
         status = current_subscription_status()
+        if status.get("status") != "active":
+            return redirect(url_for("web_paywall"))
+
+        return route_func(*args, **kwargs)
+
+    return wrapper
+
+
+def require_fresh_subscription(route_func):
+    @wraps(route_func)
+    def wrapper(*args, **kwargs):
+        if not current_web_user():
+            return redirect(url_for("web_login"))
+
+        status = current_subscription_status(force_refresh=True)
+        if status.get("status") == "error":
+            return "Could not verify subscription status right now. Please try again.", 503
         if status.get("status") != "active":
             return redirect(url_for("web_paywall"))
 

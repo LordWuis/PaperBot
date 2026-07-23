@@ -153,7 +153,7 @@ def web_dashboard():
 
 
 @app.route("/app/preview", methods=["POST"])
-@web_auth.require_active_subscription
+@web_auth.require_fresh_subscription
 def web_preview():
     import letter_service
 
@@ -183,7 +183,7 @@ def web_preview():
 
 
 @app.route("/app/send", methods=["POST"])
-@web_auth.require_active_subscription
+@web_auth.require_fresh_subscription
 def web_send():
     import database_handler
     import letter_service
@@ -258,7 +258,7 @@ def web_preview_image(draft_id):
 
 
 @app.route("/app/bulk/start", methods=["POST"])
-@web_auth.require_active_subscription
+@web_auth.require_fresh_subscription
 def web_bulk_start():
     import bulk_service
 
@@ -278,7 +278,7 @@ def web_bulk_start():
 
 
 @app.route("/app/bulk/status/<job_id>", methods=["GET"])
-@web_auth.require_active_subscription
+@web_auth.require_fresh_subscription
 def web_bulk_status(job_id):
     import bulk_service
 

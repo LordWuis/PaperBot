@@ -13,6 +13,14 @@
    August 22.
 6. Razorpay redirects web customers back to `/pay`. They can also use
    `I've Paid - Check Status`, which bypasses the local status cache.
+7. Starting, generating, or sending a letter (including bulk sending) bypasses
+   the cache and checks Google Sheets again, so administrative status changes
+   apply on the next operation.
+
+Google Apps Script currently serializes the Sheet's date-only cells one day
+behind their displayed India calendar date. PaperBot normalizes that response
+before caching and enforcing expiry so users retain access through the date
+shown in the Sheet.
 
 New accounts do not receive paid access automatically. Invalid signatures,
 partial or wrong-amount payments, non-INR payments, malformed events, and

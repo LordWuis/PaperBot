@@ -14,6 +14,7 @@ SCRIPT_URL = os.getenv('GOOGLE_SCRIPT_URL')
 # The local JSON file for caching user statuses
 CACHE_FILE = os.path.join(tempfile.gettempdir(), 'user_status_cache.json') if os.getenv("VERCEL") else 'user_status_cache.json'
 SUBSCRIPTION_DURATION_DAYS = 30
+SHEET_DATE_OFFSET_DAYS = 1
 
 
 def _load_cache():
@@ -103,14 +104,29 @@ def _apply_local_expiry(user_data: dict, today: date | None = None) -> dict:
     return normalized
 
 
-def get_user_status(user_id: int):
+def _normalize_sheet_dates(user_data: dict) -> dict:
+    """Restore date-only Sheet values shifted back one day by Apps Script UTC serialization."""
+    normalized = dict(user_data)
+    expiry_date_text = normalized.get("expiry_date")
+    if isinstance(expiry_date_text, str) and len(expiry_date_text) == 10:
+        try:
+            expiry_date = date.fromisoformat(expiry_date_text)
+            normalized["expiry_date"] = (
+                expiry_date + timedelta(days=SHEET_DATE_OFFSET_DAYS)
+            ).isoformat()
+        except ValueError:
+            pass
+    return normalized
+
+
+def get_user_status(user_id: int, force_refresh: bool = False):
     """
-    Checks user status. First checks the local JSON cache, then falls back to the Google Sheet.
+    Checks user status, optionally bypassing the local cache for sensitive actions.
     """
     cache = _load_cache()
     user_id_str = str(user_id)
 
-    if user_id_str in cache:
+    if not force_refresh and user_id_str in cache:
         cached_data = _apply_local_expiry(cache[user_id_str])
         if cached_data != cache[user_id_str]:
             cache[user_id_str] = cached_data
@@ -125,12 +141,15 @@ def get_user_status(user_id: int):
     response = _fetch_from_sheet(params)
 
     if response.get("status") == "success":
-        user_data = _apply_local_expiry(response["data"])
+        user_data = _apply_local_expiry(_normalize_sheet_dates(response["data"]))
         # Update the cache with the fresh data
         cache[user_id_str] = user_data
         _save_cache(cache)
         return user_data
     elif response.get("status") == "not_found":
+        if user_id_str in cache:
+            del cache[user_id_str]
+            _save_cache(cache)
         return {"status": "not_found"}
     else:
         # Return the error but don't cache it

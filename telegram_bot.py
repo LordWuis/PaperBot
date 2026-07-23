@@ -44,7 +44,7 @@ async def gatekeeper_check(update: Update, context: ContextTypes.DEFAULT_TYPE) -
     user_id = update.effective_user.id
     username = update.effective_user.username or update.effective_user.first_name
 
-    status_data = database_handler.get_user_status(user_id)
+    status_data = database_handler.get_user_status(user_id, force_refresh=True)
     status = status_data.get("status")
 
     if status == "not_found":

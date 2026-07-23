@@ -73,7 +73,11 @@ async def gatekeeper_check(update: Update, context: ContextTypes.DEFAULT_TYPE) -
     username = update.effective_user.username or update.effective_user.first_name
 
     try:
-        status_data = await asyncio.to_thread(database_handler.get_user_status, user_id)
+        status_data = await asyncio.to_thread(
+            database_handler.get_user_status,
+            user_id,
+            force_refresh=True,
+        )
         status = status_data.get("status")
 
         if status == "not_found":
@@ -572,7 +576,7 @@ def web_dashboard():
 
 
 @app.route("/app/preview", methods=["POST"])
-@web_auth.require_active_subscription
+@web_auth.require_fresh_subscription
 def web_preview():
     letter_type = request.form.get("letter_type", "")
     form_data = request.form.to_dict(flat=True)
@@ -598,7 +602,7 @@ def web_preview():
 
 
 @app.route("/app/send", methods=["POST"])
-@web_auth.require_active_subscription
+@web_auth.require_fresh_subscription
 def web_send():
     requested_draft_id = request.form.get("draft_id")
     active_draft_id = session.get("web_draft_id")
@@ -661,7 +665,7 @@ def web_preview_image(draft_id):
 
 
 @app.route("/app/bulk/start", methods=["POST"])
-@web_auth.require_active_subscription
+@web_auth.require_fresh_subscription
 def web_bulk_start():
     letter_type = request.form.get("letter_type", "")
     upload = request.files.get("csv_file")
@@ -679,7 +683,7 @@ def web_bulk_start():
 
 
 @app.route("/app/bulk/status/<job_id>", methods=["GET"])
-@web_auth.require_active_subscription
+@web_auth.require_fresh_subscription
 def web_bulk_status(job_id):
     job = bulk_service.advance_bulk_job(job_id)
     if not job:
