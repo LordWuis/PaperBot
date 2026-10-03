@@ -23,3 +23,6 @@ Offer_Letter_*.png
 custom_templates/assets/
 custom_templates/previews/
 custom_templates/*.sqlite3
+output/
+paperbot-vercel/
+.pytest_cache/
