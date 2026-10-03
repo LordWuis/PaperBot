@@ -1,0 +1,598 @@
+{
+  "frozen_date": "2026-09-18",
+  "cases": [
+    {
+      "name": "campus-ambassador",
+      "fn": "generate_campus_ambassador_pdf_with_preview",
+      "args": [
+        "Test Candidate"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "7ee0a326d224a1d7e22ef8c67770c47fe54a35d27a7f5403988408b8c7b55cf5",
+          "text": "We are pleased to offer you the position of Campus\nAmbassador at Persevex, our innovative and dynamic\nEdTech company. As a Campus Ambassador, you will play\na vital role in representing Persevex at your institution,\nengaging students, and promoting our programs and\ninitiatives. \nYour Key Responsibilities: \n1. Representing Persevex on your campus and building\nbrand awareness. \n2. Promoting our training programs, internships, and events\nto students. \n3. Encouraging participation in Persevex initiatives through\ncreative campaigns. \n4. Sharing feedback and insights to strengthen our\noutreach efforts.\nDear \n \nSubject: Appointment as Campus Ambassador\nDate : \nwww.persevex.com\nsupport@persevex.com\nTest Candidate\nSeptember 18, 2026\n"
+        },
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "ef38d5a33901e7e19987199b289e05e9d814cfcce14f7e25b6f25f890f3b9cd4",
+          "text": "Benefits of Being a Persevex Campus Ambassador: \nGain leadership and marketing experience. \nAccess exclusive training and mentorship opportunities. \nCertificate of Completion and Appreciation at the end of\nthe tenure. \nRewards and incentives based on performance. \nThe intern will be provided a stipend of \u20b9150 per\nregistration of students who have taken part in our\nprograms through the campus ambassador. \nLetter of Recommendation based on their performance.\nThe campus ambassador should make sure to get\nRegistration of at least 12 in total in order to take up a\nprogram by himself / herself or to be eligible for stipend. \nWe are confident that your enthusiasm and leadership will\nmake a significant impact on the success of Persevex\u2019s\nmission.\n \nWelcome aboard Let\u2019s work together to create opportunities\nand inspire success! \nwww.persevex.com\nsupport@persevex.com\n"
+        }
+      ]
+    },
+    {
+      "name": "offer",
+      "fn": "generate_offer_letter_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "31-01-2026"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "ea3a78374104a7497e9beefa962caa15b158a179bff2feed28050cc1a58a97da",
+          "text": "Date :  30/08/2025\nDear Manoj Kumar,\n                       We are pleased to offer you a 6 Months Internship/Probation Period with Persevex\nLLP on an \u201cat-will basis,\u201d which can be extended based on mutual agreement.  Please find\nbelow the details confirming your engagement:\nTraining Date: 25/09/2025 to 05/10/2025\nInternship Start Date: 05/10/2025\nInternship End Date: 26/03/2026\n                     Your job title will be \u201cBusiness Development Intern / Probationary Associate.\u201d Your\nresponsibilities will include those for which you are directly engaged, as well as any additional\nduties assigned by your reporting manager. By accepting this offer, you agree to perform all\nassigned tasks with due care, diligence, and in full compliance with company policies. You are\nrequired to devote your time and effort exclusively to your duties during business hours, as well\nas any additional time as required to complete your responsibilities.\n            You will be eligible for a stipend of \u20b915,000 per month, along with \u20b910,000 as\nperformance-based incentives, subject to statutory deductions per company policy. As an\nintern/probationary associate, you will not receive employee benefits that are available to full-\ntime employees. During this period, the company reserves the right to terminate your\nservices without cause, and you are required to give a 15-day notice if you wish to end the\ninternship/probation period before its scheduled conclusion.\n                  By accepting this offer, you acknowledge that all information shared during your\ninternship/probation period is strictly confidential. You agree not to use or disclose this\ninformation for personal gain or share it with anyone outside the company. Upon completion of\nyour tenure, you must return all company property, including equipment and electronically\nstored information.\nOffer Letter for Internship/Probation Period\nwww.persevex.com\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nTest Candidate\n18-09-2026\n31-01-2026 to 10-02-2026\n11-02-2026\n11-08-2026\n"
+        },
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "7aa45c8b2709d5a23f2e928fa2e77d7c7b172ff5df0a09b43b1efe6e5c0fbbea",
+          "text": "                By accepting this offer, you also agree to abide by all company policies and\nprocedures governing the conduct of business and employees. This letter constitutes the full\noffer extended to you and supersedes any previous discussions or agreements. All official\ncommunication, both internal and external, must be conducted through your manager\u2019s\ncompany email.\n                         To indicate your acceptance, please send a signed and scanned copy of this\noffer letter along with the required documents mentioned in Annexure-1 to hr@persevex.com\nwithin two working days of receiving this letter. If we do not receive your acceptance within this\ntime frame, the offer will automatically be withdrawn.\nNote: Upon successful completion of your internship/probation period, your compensation\npackage will be in the range of \u20b95 \u2013 \u20b97 LPA.\nWorking Hours:  8 Hours / day\nJob Type:  Full Time Internship\nMonthly Target:  \u20b92,00,000/-\nLocation:  Bangalore\nAcceptance of the Candidate:\nI have read and understood the above terms and conditions and I accept this offer, as set forth\nabove, with Persevex LLP, and will report on the mentioned training date.\nSignature: ____________________\nDate: _______________________\nWith Regards,\nShanmukh Shekar K C\nHR Head,\nPersevex LLP\nwww.persevex.com\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\n"
+        },
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "d1e0a678b3cd95bbe95cc80896e2c2ca8eb258dab29eeddd5e3f744d4adc56a5",
+          "text": "Annexure-1\nDocuments Required:\n1. Professional / Educational Certificates and Mark Sheets towards:\n10th standard or equivalent examination\n12th standard or equivalent examination\nGraduation\nPost-graduation / Doctorate\nOther relevant educational or skill certifications\n2. Color Scanned Copy of your Photographs\n3. Scanned Copy of Aadhaar Card, Voter ID or Driving License.\n4. PAN Card, Bank Account Details: Bank Name, Your Name as per Bank records, Account\nNumber, IFSC Code.\nwww.persevex.com\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\n"
+        }
+      ]
+    },
+    {
+      "name": "course-certificate",
+      "fn": "generate_completion_certificate",
+      "args": [
+        "Test Candidate",
+        "18 September, 2026",
+        "Web Development",
+        "test-cert-123"
+      ],
+      "pages": [
+        {
+          "width": 842.25,
+          "height": 595.5,
+          "pixels_sha256": "70d71c2de3cf862ee6e300073d93d9bfa7e8661aa94513f21ba4512285771076",
+          "text": "Shanmukh Shekar K C\nAdministrator\ncertificate\nof course completion\nThis certificate is proudly presented to\nIssued on: _______\nTest Candidate\n18 September, 2026\nThis is to certify that the candidate has successfully completed internship in\nWeb Development.\n"
+        }
+      ]
+    },
+    {
+      "name": "ca-certificate",
+      "fn": "ca_certificate",
+      "args": [
+        "Test Candidate",
+        "18 September, 2026"
+      ],
+      "pages": [
+        {
+          "width": 842.25,
+          "height": 595.5,
+          "pixels_sha256": "c7ae4ef281534075cdbfaf0ae86e0ef374c8b46c3d0e6fc6f3cefc975bd58a82",
+          "text": "CERTIFICATE OF\nPARTICIPATION\nShanmukh Shekar KC\nAdministrator\nThis certificate is proudly presented to\nTest Candidate\nHas successfully completed the Persevex Campus Representative\nProgram from 18 September, 2026 and has demonstrated\nexceptional competency, dedication, and commitment while\ncontributing effectively to the program.\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-artificial intelligence",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "artificial intelligence"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "625bdd78c689a31569ee0d87e0a900578c281bc3ed211a78bd7752ca6c555870",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Artificial Intelligence  with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-machine learning",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "machine learning"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "dbc3929005635798aad8c4486ec764cef5c6899e57aa53e865b3d5cd376c73e9",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Machine Learning  with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-web development",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "web development"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "ae9f80189620a988d93c418fec94182bac1075332d2b277f9ab02160cbb0b146",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Web Development  with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-cybersecurity",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "cybersecurity"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "4b6e3ee02654cf3df8dc6ca2cc28bf8ff06a766f6ef4549d26f0936323f13dd9",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Cybersecurity with Persevex LLP, Which\nis of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-data science",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "data science"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "0ee3eb35876b432364a0e63b3fa1966fa810a2a33e4e7d3c9655602e338d83e1",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Data Science  with Persevex LLP, Which\nis of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-digital marketing",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "digital marketing"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "5affd0906a864735671303d3ce92a2d670ea23653ef849660c84bf63059b5845",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Digital Marketing  with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-human resource management",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "human resource management"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "9e3717abd66ef13734213e841bd2540900d74e13a8b8cdfefccd1ba5d0d6ee64",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Human Resources with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-human resource",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "human resource"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "9e3717abd66ef13734213e841bd2540900d74e13a8b8cdfefccd1ba5d0d6ee64",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Human Resources with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-finance",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "finance"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "ea79252173f36ba8f07a9ab39867c16d1726981028ab2a7bcd535a0a499da221",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Finance with Persevex LLP, Which is of\n2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-financial modeling & analysis",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "financial modeling & analysis"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "ea79252173f36ba8f07a9ab39867c16d1726981028ab2a7bcd535a0a499da221",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Finance with Persevex LLP, Which is of\n2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-financial modeling & valuation",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "financial modeling & valuation"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "ea79252173f36ba8f07a9ab39867c16d1726981028ab2a7bcd535a0a499da221",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Finance with Persevex LLP, Which is of\n2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-cloud computing",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "cloud computing"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "05fc879f7893116e3df47a8002929fb67ebefd7efc5078679f39d14aeeb48cf4",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  AWS Cloud Computing  with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4 hours\nper week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and evaluate\ntheir performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-aws cloud computing",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "aws cloud computing"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "05fc879f7893116e3df47a8002929fb67ebefd7efc5078679f39d14aeeb48cf4",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  AWS Cloud Computing  with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4 hours\nper week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and evaluate\ntheir performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-auto cad",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "auto cad"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "73d8423322879d1b432d95aa1448c43607611ecbd45740b9a3e6aa6de6903457",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  AutoCAD  with Persevex LLP, Which is \nof 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-autocad",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "autocad"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "73d8423322879d1b432d95aa1448c43607611ecbd45740b9a3e6aa6de6903457",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  AutoCAD  with Persevex LLP, Which is \nof 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-embedded system",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "embedded system"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "1784387513e6bd14fff330525fdc5e653ad93c453e940c028d6c877f8152c0d1",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Embedded System with Persevex\nLLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-iot",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "iot"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "c4e0edf5cfcb68895f9ce8818ad0423797e4477df8243913cb29037e5f6a0178",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Internet of things with Persevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-iot (internet of things)",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "iot (internet of things)"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "c4e0edf5cfcb68895f9ce8818ad0423797e4477df8243913cb29037e5f6a0178",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Internet of things with Persevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-stock market & crypto",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "stock market & crypto"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "99ab705aadd25a696b9b9aa331a6316fb2cac45b0763643ee01dc9248bbb23cb",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of stock market and crypto currency\nwith Persevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-stock market",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "stock market"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "99ab705aadd25a696b9b9aa331a6316fb2cac45b0763643ee01dc9248bbb23cb",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of stock market and crypto currency\nwith Persevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-stock market & crypto currency",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "stock market & crypto currency"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "99ab705aadd25a696b9b9aa331a6316fb2cac45b0763643ee01dc9248bbb23cb",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of stock market and crypto currency\nwith Persevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-stock market & crypto trading",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "stock market & crypto trading"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "99ab705aadd25a696b9b9aa331a6316fb2cac45b0763643ee01dc9248bbb23cb",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of stock market and crypto currency\nwith Persevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-vlsi",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "vlsi"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "206c532494cabe6e66069a4255f970813b6413fe609e5d1d61484ff67404b3c9",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  VLSI with Persevex LLP, Which is of 2 \nmonths duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-medical coding",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "medical coding"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "4966abc44812dd588db81387c5015ef364d353d1041a7cda64b5368810f13436",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Medical Coding  with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-business analytics",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "business analytics"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "f3bdb81079c72197d24d0ffba727b971e69846bf7342aed015ab5c553d2ab515",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Business Analytics  with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-data analytics",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "data analytics"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "e9f6c48086c572e49ee35f2010039ec93f959e39cbbbcaaf33100dd6e67535f3",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of  Data Analytics  with Persevex LLP,\nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each domain.\nThis includes meaningful tasks that focus on developing the knowledge, skills, and\nabilities of the students that are applicable to future employment opportunities. A\nmentor will conduct weekly check-in meetings to discuss the progress and\nevaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025 or\nuntil the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-logistics and supply chain",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "logistics and supply chain"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "87a8acae615cb60e5f65eb44eef08136fae4e4e8aa6075af79872041903420bb",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of Logistics and suppy Chain with \nPersevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-logistic and supply chain",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "logistic and supply chain"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "87a8acae615cb60e5f65eb44eef08136fae4e4e8aa6075af79872041903420bb",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of Logistics and suppy Chain with \nPersevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-logistics and supply chain management",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "logistics and supply chain management"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "87a8acae615cb60e5f65eb44eef08136fae4e4e8aa6075af79872041903420bb",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of Logistics and suppy Chain with \nPersevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    },
+    {
+      "name": "internship-logistic and supply chain management",
+      "fn": "generate_internship_acceptance_pdf_with_preview",
+      "args": [
+        "Test Candidate",
+        "November",
+        "logistic and supply chain management"
+      ],
+      "pages": [
+        {
+          "width": 595.5,
+          "height": 842.25,
+          "pixels_sha256": "87a8acae615cb60e5f65eb44eef08136fae4e4e8aa6075af79872041903420bb",
+          "text": "To whomsoever it may concern,\nThis letter is to confirm that Mr/Ms.  \nHas been offered an internship in the field of Logistics and suppy Chain with \nPersevex LLP, \nWhich is of 2 months duration, under the supervision of Mr. Shanmukh Shekar K C.\nIn order to receive credit, the student\u2019s internship experience must meet the\nstandard requirements. I affirm that this internship is a total of 8 weeks and 4\nhours per week, which sums to 32 hours for the entire duration of each\ndomain.\nThis includes meaningful tasks that focus on developing the knowledge, skills,\nand abilities of the students that are applicable to future employment\nopportunities. A mentor will conduct weekly check-in meetings to discuss the\nprogress and evaluate their performance.\nThe duration of the internship program ranges from 10/10/2025 to 10/12/2025\nor until the student completes the required number of internship hours.\nElite Co-Works, BTM 1st Stage,\nBengaluru, Karnataka 560068\nsupport@persevex.com\n8660128339\nBest regards,\nShanmukh Shekar K C\nAdministrator,\nPersevex.\nPAN - ABHFP1839N\nGSTIN - 29ABHFP1839N1ZK\nINTERNSHIP ACCEPTANCE\nLETTER\nTest Candidate\n10-11-2026\n10-01-2027\n"
+        }
+      ]
+    }
+  ]
+}
